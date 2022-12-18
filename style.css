@@ -1,0 +1,192 @@
+
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>> BASE STYLES <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< */
+* {
+    box-sizing: border-box;
+}
+
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    background-color: hsl(257, 40%, 49%);
+    color: #fff;
+    padding: 0 2.1rem;
+    background-image: url(images/bg-mobile.svg);
+    background-repeat: no-repeat;
+}
+
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 90rem;
+}
+
+
+h1 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+
+p {
+    line-height: 1.6rem;
+    font-size: .95rem;
+}
+
+
+footer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> CLASS STYLES <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< */
+.mid-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+
+.illustration-image {
+    max-width: 100%;
+    padding: 1.5rem 0;
+
+}
+
+
+.main-para {
+    padding: 2rem 0;
+}
+
+
+.register-link {
+    display: inline-block;
+    text-decoration: none;
+    background-color: #fff;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: .9rem;
+    border-radius: 2rem;
+    margin: 2rem 0;
+    padding: .7rem 5rem;
+}
+
+
+.register-link:hover {
+    color: #fff;
+    background-color: hsl(300, 69%, 71%);
+    transition: ease 1s;
+}
+
+
+.parent-icon {
+    display: flex;
+    width: 14rem;
+    justify-content: space-around;
+    padding: 0;
+    margin: 2rem auto;
+}
+
+
+.icons {
+    list-style: none;
+    filter: invert(1);  /* Changing SVG colors is not simple, Used "Filter" property here to change color to white */
+    border: 3px solid #000; /* Used color black here to change to white because of previous "Filter" property */
+    border-radius: 50%;
+    padding : 10px 15px;
+}
+
+
+.icons:hover {
+    /* This bullsh*t "filter: invert" phenomenon contiues here as well to change color to soft purple on Hover
+      all because of the previous "Filter" property */
+    filter: invert(63%) sepia(80%) saturate(750%) hue-rotate(236deg) brightness(98%) contrast(85%);
+    border-color: invert(63%) sepia(80%) saturate(750%) hue-rotate(236deg) brightness(98%) contrast(85%);
+    transition: ease 1s;
+}
+
+
+.credit {
+    color: #ff7f50;
+}
+
+
+body > footer {
+    position: sticky;
+    top: 100vh;
+}
+
+
+
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> MEDIA QUERIES <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< */
+@media screen and (min-width: 47.438rem) {
+    body {
+        background-image: url(images/bg-desktop.svg);
+        background-position: left;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+
+    h1 {
+        font-size: 2rem;
+    }
+
+
+    .illustration-image {
+        max-width: 70%;
+    }
+
+
+    .mid-section {
+        flex-direction: row;
+    }
+
+
+    .lower-mid-section {
+        text-align: left;
+        padding: 0 1.5rem 0 3rem;
+    }
+
+
+    .parent-icon {
+        width: 100%;
+        justify-content: center;
+    }
+
+
+    .icons {
+        margin-left: 1.25rem;
+    }
+
+
+    .main-para {
+        padding: 1rem 0;
+    }
+}
+
+
+@media only screen and (min-width: 70rem) {
+    .parent-icon {
+        justify-content: flex-end;
+    }
+}
+
